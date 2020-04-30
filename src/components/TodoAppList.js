@@ -4,12 +4,15 @@ import {connect} from "react-redux";
 
 const TodoAppList = ({todos}) => {
     return (
-        <div>
+        <div >
+            <h1 >
             {
                 todos.map((todo) => {
-                    return <TodoAppListItem {...todo} />
+                    return <TodoAppListItem  {...todo} />
                 })
             }
+            </h1>
+            
         </div>
     );
 };
@@ -20,5 +23,11 @@ const mapStateToProps = (state) => {
     }
 }
 
+const listStyled = {
+    color: 'white', 
+    border: '3px solid white', 
+    borderRadius: '3px', 
+
+}
 
 export default connect(mapStateToProps)(TodoAppList);
