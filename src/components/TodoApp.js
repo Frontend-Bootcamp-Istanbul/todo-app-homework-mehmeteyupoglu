@@ -9,7 +9,7 @@ class TodoApp extends React.Component{
 
     render(){
         return (
-            <div>
+            <div >
                 <TodoAppHeader/>
                 <TodoAppList />
             </div>
