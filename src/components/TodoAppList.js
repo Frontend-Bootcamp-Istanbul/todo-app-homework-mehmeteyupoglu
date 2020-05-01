@@ -3,7 +3,7 @@ import TodoAppListItem from "./TodoAppListItem";
 import {connect} from "react-redux";
 import TodoAppDelete from "./TodoAppDelete"
 import deleteTodo from "./TodoAppDelete"
-const TodoAppList = ({todos}) => {
+const TodoAppList = ({todos, id, deleteTodo}) => {
     return (
         <div >
             <h1 >
@@ -12,7 +12,7 @@ const TodoAppList = ({todos}) => {
                     return (
                     <div>
                         <TodoAppListItem  {...todo} /> 
-                        <TodoAppDelete />
+                        <TodoAppDelete deleteTodo={id}/>
                     </div>)
                    
                 })

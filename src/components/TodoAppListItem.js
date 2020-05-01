@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 import {toggleTodo} from "../redux/actions";
+import TodoAppDelete from "./TodoAppDelete"
 
 
 const TodoAppListItem = ({content, id, completed, toggleTodo, props}) => {
@@ -20,6 +21,7 @@ const TodoAppListItem = ({content, id, completed, toggleTodo, props}) => {
             
         }} onClick={() => toggleTodo(id)}>
             {content} 
+            
         </div>
     );
 };

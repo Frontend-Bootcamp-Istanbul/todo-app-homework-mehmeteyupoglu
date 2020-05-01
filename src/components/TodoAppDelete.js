@@ -5,17 +5,22 @@ import { Button } from 'reactstrap';
 
 const TodoAppDelete = (props) => {
 
+    const {id, deleteTodo} = props
     
     return (
-
-
-        <Button onclick={() => {props.deleteTodo(props.id)}} style={styledButton} color="warning">X</Button>
+        <Button type='submit' 
+        onclick={() => {
+        
+            deleteTodo(id)
+            console.log(id)
+        
+        }} 
+        style={styledButton} 
+        color="warning">
+        X
+        </Button>
     );
 };
-
-const mapDispatchToProps = {
-    deleteTodo : deleteTodo
-}
 
 const styledButton = {
     display: 'flex', 
@@ -29,6 +34,10 @@ const styledButton = {
     border: '2px solid #e0201d', 
     marginLeft: '200px'
     
+}
+
+const mapDispatchToProps = {
+    deleteTodo : deleteTodo
 }
 
 export default connect(null, mapDispatchToProps)(TodoAppDelete);
