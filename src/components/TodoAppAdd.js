@@ -59,16 +59,19 @@ const btnStyle = {
     marginLeft: '5px', 
     height: '2rem', 
     width: '50px', 
-    backgroundColor: 'grey', 
-    border: '1px solid #919189', 
+    backgroundColor: '#c5b5c9', 
+    border: '1px solid #8e54e9', 
     borderRadius: '3px', 
+    color: 'white', 
+    fontSize: '20px', 
+    fontWeigth: 'bold'
 }
 
 const inputStyled = {
     height: '1.75rem', 
     width: '15rem', 
     border: '4px solid linear-gradient(to right, #4776e6, #8e54e9)', 
-    borderRadius: '3px', 
+    borderRadius: '10px', 
 }
 
 export default connect(null, mapDispatchToProps)(TodoAppAdd);

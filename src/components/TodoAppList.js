@@ -23,11 +23,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-const listStyled = {
-    color: 'white', 
-    border: '3px solid white', 
-    borderRadius: '3px', 
-
-}
-
 export default connect(mapStateToProps)(TodoAppList);

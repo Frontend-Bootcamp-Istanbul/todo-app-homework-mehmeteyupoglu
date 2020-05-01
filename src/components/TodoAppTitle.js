@@ -17,7 +17,7 @@ const titleStyled = {
     fontWeight: 'bold', 
     textAlign : 'center', 
     fontSize : '25px', 
-    border: '3px solid white', 
+    border: '0.5px solid white', 
     borderRadius: '3px', 
 }
 

@@ -12,7 +12,9 @@ export const todoReducer = (state= [], action)  => {
                        return {...todo, completed: !todo.completed}
                    }
                    return todo;
-               })
+               }); 
+            // case "DELETE_TODO": 
+            //    return
            default:
                return state;
        }
