@@ -2,7 +2,8 @@ import React from 'react';
 import {connect} from "react-redux";
 import {toggleTodo} from "../redux/actions";
 
-const TodoAppListItem = ({content, id, completed, toggleTodo}) => {
+
+const TodoAppListItem = ({content, id, completed, toggleTodo, props}) => {
     return (
         <div style={{
             textDecoration: completed ? "line-through" : "initial", 
@@ -14,9 +15,11 @@ const TodoAppListItem = ({content, id, completed, toggleTodo}) => {
             fontSize: '20px', 
             boxShadow: '1.5px 2px 2px 1px #d9c1e0', 
             margin: '3px',  
+            display: 'flex', 
+
             
         }} onClick={() => toggleTodo(id)}>
-            {content}
+            {content} 
         </div>
     );
 };

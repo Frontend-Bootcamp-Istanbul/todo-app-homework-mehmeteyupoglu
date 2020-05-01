@@ -51,9 +51,6 @@ const formStyled = {
     justifyContent: 'center', 
     alignItems: 'center'
 }
-const mapDispatchToProps = {
-    addTodo: addTodo
-};
 
 const btnStyle = {
     marginLeft: '5px', 
@@ -73,5 +70,9 @@ const inputStyled = {
     border: '4px solid linear-gradient(to right, #4776e6, #8e54e9)', 
     borderRadius: '10px', 
 }
+
+const mapDispatchToProps = {
+    addTodo: addTodo
+};
 
 export default connect(null, mapDispatchToProps)(TodoAppAdd);

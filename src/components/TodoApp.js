@@ -2,12 +2,8 @@ import React from 'react';
 import TodoAppHeader from "./TodoAppHeader";
 import TodoAppList from "./TodoAppList";
 
-class TodoApp extends React.Component{
-    constructor(props){
-        super(props);
-    }
+function TodoApp (){
 
-    render(){
         return (
             <div >
                 <TodoAppHeader/>
@@ -15,6 +11,5 @@ class TodoApp extends React.Component{
             </div>
         );
     }
-}
 
 export default TodoApp

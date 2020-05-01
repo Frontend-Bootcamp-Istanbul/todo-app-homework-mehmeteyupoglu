@@ -1,17 +1,24 @@
 import React from 'react';
 import TodoAppListItem from "./TodoAppListItem";
 import {connect} from "react-redux";
-
+import TodoAppDelete from "./TodoAppDelete"
+import deleteTodo from "./TodoAppDelete"
 const TodoAppList = ({todos}) => {
     return (
         <div >
             <h1 >
             {
                 todos.map((todo) => {
-                    return <TodoAppListItem  {...todo} />
+                    return (
+                    <div>
+                        <TodoAppListItem  {...todo} /> 
+                        <TodoAppDelete />
+                    </div>)
+                   
                 })
             }
             </h1>
+            
             
         </div>
     );
