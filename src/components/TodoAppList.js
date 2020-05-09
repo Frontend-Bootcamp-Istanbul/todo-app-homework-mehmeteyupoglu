@@ -1,9 +1,9 @@
 import React from 'react';
 import TodoAppListItem from "./TodoAppListItem";
 import {connect} from "react-redux";
-import TodoAppDelete from "./TodoAppDelete"
-import deleteTodo from "./TodoAppDelete"
-const TodoAppList = ({todos, id, deleteTodo}) => {
+
+
+const TodoAppList = ({todos}) => {
     return (
         <div >
             <h1 >
@@ -12,14 +12,10 @@ const TodoAppList = ({todos, id, deleteTodo}) => {
                     return (
                     <div>
                         <TodoAppListItem  {...todo} /> 
-                        <TodoAppDelete deleteTodo={id}/>
-                    </div>)
-                   
+                    </div>) 
                 })
             }
-            </h1>
-            
-            
+            </h1>     
         </div>
     );
 };

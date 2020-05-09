@@ -1,12 +1,13 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {toggleTodo} from "../redux/actions";
-import TodoAppDelete from "./TodoAppDelete"
+import {toggleTodo, deleteTodo} from "../redux/actions";
 
 
-const TodoAppListItem = ({content, id, completed, toggleTodo, props}) => {
+
+const TodoAppListItem = ({content, id, completed, toggleTodo, deleteTodo}) => {
     return (
-        <div style={{
+        <div>
+            <div style={{
             textDecoration: completed ? "line-through" : "initial", 
             color: 'white', 
             border: '1px solid white', 
@@ -23,11 +24,17 @@ const TodoAppListItem = ({content, id, completed, toggleTodo, props}) => {
             {content} 
             
         </div>
+
+        <button onClick={() => deleteTodo(id)}>Delete</button>
+
+        </div>
+        
     );
 };
 
 const mapDispatchToProps = {
-    toggleTodo: toggleTodo
+    toggleTodo,
+    deleteTodo
 }
 
 export default connect(null, mapDispatchToProps)(TodoAppListItem);
