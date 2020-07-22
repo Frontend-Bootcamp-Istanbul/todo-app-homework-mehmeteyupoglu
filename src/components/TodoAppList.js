@@ -2,14 +2,20 @@ import React from 'react';
 import TodoAppListItem from "./TodoAppListItem";
 import {connect} from "react-redux";
 
+
 const TodoAppList = ({todos}) => {
     return (
-        <div>
+        <div >
+            <h1 >
             {
                 todos.map((todo) => {
-                    return <TodoAppListItem {...todo} />
+                    return (
+                    <div>
+                        <TodoAppListItem  {...todo} /> 
+                    </div>) 
                 })
             }
+            </h1>     
         </div>
     );
 };
@@ -19,6 +25,5 @@ const mapStateToProps = (state) => {
         todos: state.todoReducer
     }
 }
-
 
 export default connect(mapStateToProps)(TodoAppList);
